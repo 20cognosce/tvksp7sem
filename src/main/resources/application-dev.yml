@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/prac3
+    username: postgres
+    password: password
+
+image-storage-dir: "${user.home}/static"
