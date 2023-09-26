@@ -4,6 +4,7 @@ import com.mirea.app.controller.exception.EntityNotFoundException;
 import com.mirea.app.domain.entity.Image;
 import com.mirea.app.repo.ImageRepository;
 import jakarta.annotation.PostConstruct;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -31,6 +32,7 @@ import java.util.concurrent.atomic.AtomicLong;
 public class ImageService {
 
     private final ImageRepository imageRepository;
+    @Getter
     private final Path imageStorageDir;
     private final AtomicLong counter = new AtomicLong(1);
 
